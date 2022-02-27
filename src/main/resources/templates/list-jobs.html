@@ -12,9 +12,9 @@
 
     <!-- TODO #1 - Use a loop to display job results in a table. -->
 
-    <table th:fragment="jobs-list" class="table centeredTable table-striped">
+    <table th:fragment="jobs-list" class="job-listing">
         <th:block th:each="job : ${jobs}">
-        <tr >
+        <tr>
         <td>
             <span th:text="'ID: ' + ${job.id}"></span>
         <br />
