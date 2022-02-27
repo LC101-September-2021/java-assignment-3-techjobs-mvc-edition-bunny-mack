@@ -12,7 +12,7 @@
 
     <!-- TODO #1 - Use a loop to display job results in a table. -->
 
-    <table class="table centeredTable table-striped">
+    <table th:fragment="jobs-list" class="table centeredTable table-striped">
         <th:block th:each="job : ${jobs}">
         <tr >
         <td>

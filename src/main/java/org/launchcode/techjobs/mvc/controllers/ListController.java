@@ -55,12 +55,13 @@ public class ListController {
         if (column.equals("all")){
             jobs = JobData.findAll();
             model.addAttribute("title", "All Jobs");
+            model.addAttribute("jobs", jobs);
+
         } else {
             jobs = JobData.findByColumnAndValue(column, value);
             model.addAttribute("title", "Jobs with " + columnChoices.get(column) + ": " + value);
+            model.addAttribute("jobs", jobs);
         }
-        model.addAttribute("jobs", jobs);
-
         return "list-jobs";
     }
 }
